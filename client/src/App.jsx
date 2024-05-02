@@ -1,5 +1,13 @@
+import { Box, Flex } from "@chakra-ui/react";
+
 function App() {
-  return <></>;
+  return (
+    <Box>
+      <Flex></Flex>
+    </Box>
+  );
 }
+
+//estilos
 
 export default App;
