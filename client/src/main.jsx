@@ -1,16 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import ReactDOM from "react-dom";
+import App from "./App";
+import Store from "./Redux/Store";
+import { Provider } from "react-redux";
+
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import "@atlaskit/css-reset";
+import "./Components/Modals/EditCardModal/Popovers/Date/DateRange.css";
 import "./index.css";
 
-//librerías
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "./theme/theme.js";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
+    <Provider store={Store}>
       <App />
-    </ChakraProvider>
-  </React.StrictMode>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
