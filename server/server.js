@@ -25,14 +25,14 @@ mongoose.Promise = global.Promise;
 mongoose
   .connect(process.env.DB_CREDENTIAL)
   .then(() => {
-    console.log("¡Conexión a MongoDB exitosa!");
+    console.log("✅ ¡Conexión a MongoDB exitosa!");
     app.listen(process.env.PORT, () => {
-      console.log(`El servidor está listo! Puerto: ${process.env.PORT}`);
+      console.log(`✅ El servidor está listo! Puerto: ${process.env.PORT}`);
     });
   })
   .catch((error) => {
-    console.log(`Error al conectarse a MongoDB: ${error}`);
-    console.log(`Detalles: ${err}`);
+    console.log(`💥 Error al conectarse a MongoDB: ${error}`);
+    console.log(`Detalles: ${error}`);
   });
 
 //config de rutas
